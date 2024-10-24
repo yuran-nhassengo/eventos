@@ -14,7 +14,8 @@ Route::get('/contactos', function () {
 Route::get('/produtos', function () {
 
     $nome = "Banana";
+    $arr = [10,20,30,40,50];
 
-    return view('products',['produto' =>$nome]);
+    return view('products',['produto' =>$nome,'arr'=>$arr]);
 });
  
