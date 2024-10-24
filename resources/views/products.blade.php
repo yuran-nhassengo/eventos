@@ -9,12 +9,10 @@
 <h1>Tela de Produtos</h1>
 
 <main>
-    @if($produto == "Banana")
-        <p>Escolheu uma Banana</p>
-    @elseif(@produto == "Laranja")
-        <p>Escolheu uma Laranja</p>
+    @if($busca != "")
+        <p>O Usuario esta pesquisando alguma coisa</p>
     @else
-        <p>Opcao Invalidade</p>
+        <p>Nada de pesquisa</p>
     @endif
 
     @for($i =0;$i < count($arr);$i++)

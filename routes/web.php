@@ -16,7 +16,9 @@ Route::get('/produtos', function () {
     $nome = "Banana";
     $arr = [10,20,30,40,50];
 
-    return view('products',['produto' =>$nome,'arr'=>$arr]);
+    $busca = request('search');
+
+    return view('products',['produto' =>$nome,'arr'=>$arr,'busca'=>$busca]);
 });
  
 Route::get('/produtos/{id}', function ($id) {
