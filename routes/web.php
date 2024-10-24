@@ -19,3 +19,10 @@ Route::get('/produtos', function () {
     return view('products',['produto' =>$nome,'arr'=>$arr]);
 });
  
+Route::get('/produtos/{id}', function ($id) {
+
+    $frutas =['Banana',"Manga","Laranja","Uva"];
+
+    return view('productid',['id' =>$id,'frutas'=>$frutas]);
+});
+ 
