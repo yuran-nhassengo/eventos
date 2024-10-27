@@ -1,10 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EventController;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[EventController::class,'index']);
 
 
 Route::get('/contactos', function () {
